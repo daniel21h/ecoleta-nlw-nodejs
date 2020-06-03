@@ -11,9 +11,11 @@ const itemsController = new ItemsController();
 
 // Get Users
 routes.get('/items', itemsController.index);
-// Create collection point
+// Create collects point
 routes.post('/points', pointsController.create);
-// List a specific collection point
+// Filter list by state/city/items
+routes.get('/points', pointsController.index);
+// List a specific collects point
 routes.get('/points/:id', pointsController.show);
 
 export default routes;
